@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamma Pistache - Pastelería Francesa en Cali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #c28e76;
+            --secondary-color: #f5e8e2;
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --accent-color: #906753;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        body {
+            background-color: var(--secondary-color);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 180px;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light-text);
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 20px;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 40px 0;
+        }
+        
+        .about-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+        
+        .about-image {
+            flex: 1;
+            max-width: 500px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Products Section */
+        .product-card {
+            background-color: var(--light-text);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .product-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        /* Contact Info */
+        .contact-info {
+            background: var(--light-text);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .social-links a {
+            color: var(--light-text);
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+            text-decoration: none;
+            animation: pulse 1.5s infinite;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            background-color: #20ba59;
+            animation: none;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                max-width: 100%;
+            }
+            
+            .hero {
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/Encabezado.jpg" alt="Mamma Pistache Logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio" style="background-image: url('images/Primerazo2.jpg');">
+        <div class="hero-content">
+            <h1>Bienvenidos a nuestro mundo dulce</h1>
+            <p>Postres artesanalmente hechos con el corazón</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-nosotras">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Nosotras</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Somos Sandra y Vanessa</h3>
+                    <p>Dos primas, amigas y socias apasionadas por el arte de la pastelería francesa. Desde el año 2013, con mucho amor y dedicación, decidimos compartir nuestro mundo dulce con nuestra hermosa ciudad de Cali.</p>
+                    <p>Cada creación que sale de nuestra cocina combina autenticidad, calidad y un toque especial que nos define. Nos inspira la elegancia y el sabor de la repostería francesa, pero sobre todo, la alegría de endulzar momentos inolvidables para nuestros clientes.</p>
+                    <p>¡Gracias por ser parte de esta historia con nosotras!</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/Sobrenosotras.jpg" alt="Sandra y Vanessa - Fundadoras de Mamma Pistache">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" style="background-color: var(--primary-color); color: var(--light-text);">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: var(--light-text);">Nuestros Productos</h2>
+            </div>
+            <h3 style="text-align: center; margin-bottom: 30px;">PARA TODA OCASIÓN</h3>
+            <p style="text-align: center; margin-bottom: 50px;">Ofrecemos el servicio de catering dulce para eventos de todo tipo, personal y empresarial. Tortas con diseños exclusivos y postres de especialidad para cualquier ocasión.</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('images/Tartaletas de frutas.jpg');"></div>
+                    <div class="product-info">
+                        <h3>Tartaletas de Frutas</h3>
+                        <p>Deliciosas tartaletas con base de masa quebrada y rellenos de temporada.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('images/Pasteles de chocolate.jpg');"></div>
+                    <div class="product-info">
+                        <h3>Pasteles de Chocolate</h3>
+                        <p>Elaborados con chocolate fino y decorados artesanalmente para cada ocasión.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('images/Macarons.jpg');"></div>
+                    <div class="product-info">
+                        <h3>Macarons</h3>
+                        <p>Auténticos macarons franceses en variedad de sabores y colores.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Postres artesanalmente hechos con el corazón</h2>
+            </div>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p>En Mamma Pistache creemos que cada postre debe ser una experiencia única. Cada ingrediente es cuidadosamente seleccionado para garantizar el sabor auténtico que nos caracteriza.</p>
+                <p>Nuestro compromiso es endulzar momentos especiales y crear recuerdos que perduren en el paladar de nuestros clientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" style="background-color: var(--secondary-color);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contáctanos</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>Dirección:</strong><br>Cra 2 Oeste # 12 -75 Santa Teresita, Cali Colombia</p>
+                    <p><strong>Correo Electrónico:</strong><br>mammapistache@gmail.com</p>
+                    <p><strong>Número Telefónico:</strong><br>+57 3135365039</p>
+                    <p><strong>Horario de Atención:</strong><br>Lunes a Sábado: 9:00 AM - 7:00 PM<br>Domingo: 10:00 AM - 3:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.facebook.com/mammapistache" target="_blank" aria-label="Síguenos en Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/mammapistache?igsh=ZThjZmE5eW44Ync1" target="_blank" aria-label="Síguenos en Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/573135365039" target="_blank" aria-label="Contáctanos por WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mamma Pistache Pâtisserie. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573135365039" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+</html>
