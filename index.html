@@ -34,10 +34,10 @@
             padding: 0 20px;
         }
         
-        /* Header */
+        /* Header and Logo */
         header {
             background-color: var(--secondary-color);
-            padding: 20px 0;
+            padding: 10px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
@@ -46,13 +46,26 @@
         
         .logo {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            width: 200px;
         }
         
         .logo img {
-            max-width: 180px;
-            height: auto;
+            width: 200px;
+            height: 80px;
             object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        /* Container for header layout */
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         /* Hero Section */
@@ -381,13 +394,13 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">
-                <img src="images/Encabezado.jpg" alt="Mamma Pistache Logo">
-            </div>
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
                 <span></span>
+            </div>
+            <div class="logo">
+                <img src="images/logo2.png" alt="Mamma Pistache Logo">
             </div>
             <nav id="menu">
                 <ul>
