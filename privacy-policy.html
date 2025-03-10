@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Mamma Pistache</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #c28e76;
+            --secondary-color: #f5e8e2;
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --accent-color: #906753;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        body {
+            background-color: var(--secondary-color);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--secondary-color);
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 10px;
+            width: 200px;
+        }
+        
+        .logo img {
+            width: 200px;
+            height: 80px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .privacy-content {
+            background-color: var(--light-text);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .privacy-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .privacy-content h2 {
+            color: var(--accent-color);
+            margin: 25px 0 15px 0;
+        }
+
+        .privacy-content p {
+            margin-bottom: 15px;
+        }
+
+        .privacy-content ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .privacy-content li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .social-links a {
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--dark-text);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark-text);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--secondary-color);
+                padding: 20px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: block;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+                text-align: center;
+            }
+            
+            .privacy-content {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .footer-section {
+                flex: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <a href="index.html" class="logo">
+                <img src="images/logo2.png" alt="Mamma Pistache Logo">
+            </a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Privacy Policy Content -->
+    <main class="container">
+        <div class="privacy-content">
+            <h1>Política de Privacidad</h1>
+            
+            <p>Última actualización: 10 de marzo de 2025</p>
+
+            <h2>1. Información que Recopilamos</h2>
+            <p>En Mamma Pistache, valoramos y respetamos su privacidad. Esta política describe la información que podemos recopilar cuando usted visita nuestro sitio web:</p>
+            <ul>
+                <li>Información de contacto (nombre, correo electrónico, número de teléfono)</li>
+                <li>Información de pedidos y preferencias de productos</li>
+                <li>Datos de uso del sitio web</li>
+            </ul>
+
+            <h2>2. Uso de la Información</h2>
+            <p>Utilizamos la información recopilada para:</p>
+            <ul>
+                <li>Procesar y entregar sus pedidos</li>
+                <li>Comunicarnos con usted sobre sus pedidos</li>
+                <li>Enviar información sobre productos y promociones</li>
+                <li>Mejorar nuestros productos y servicios</li>
+            </ul>
+
+            <h2>3. Protección de Datos</h2>
+            <p>Implementamos medidas de seguridad para proteger su información personal contra acceso, alteración o divulgación no autorizada.</p>
+
+            <h2>4. Cookies</h2>
+            <p>Utilizamos cookies para mejorar su experiencia en nuestro sitio web. Puede configurar su navegador para rechazar cookies, aunque esto puede afectar algunas funcionalidades del sitio.</p>
+
+            <h2>5. Derechos del Usuario</h2>
+            <p>Usted tiene derecho a:</p>
+            <ul>
+                <li>Acceder a su información personal</li>
+                <li>Solicitar la corrección de datos inexactos</li>
+                <li>Solicitar la eliminación de sus datos</li>
+                <li>Oponerse al procesamiento de sus datos</li>
+            </ul>
+
+            <h2>6. Contacto</h2>
+            <p>Si tiene preguntas sobre nuestra política de privacidad, puede contactarnos a través de:</p>
+            <ul>
+                <li>Email: info@mammapistache.com</li>
+                <li>Teléfono: +57 (2) 123-4567</li>
+                <li>Dirección: Cali, Colombia</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mamma Pistache</h3>
+                    <p>Pastelería Francesa en Cali</p>
+                    <p>Horario: Lunes a Sábado 9:00 AM - 7:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces</h3>
+                    <a href="index.html#inicio">Inicio</a>
+                    <a href="index.html#nosotros">Nosotros</a>
+                    <a href="index.html#productos">Productos</a>
+                    <a href="index.html#contacto">Contacto</a>
+                    <a href="privacy-policy.html">Política de Privacidad</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: info@mammapistache.com</p>
+                    <p>Tel: 315 3656039</p>
+                    <p>Cali, Colombia</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Toggle Functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
